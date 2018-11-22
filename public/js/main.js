@@ -19,11 +19,30 @@ $( document ).ready(function() {
         success: function (response) {
             console.log(response);
             response.forEach(element => {
-                content = content + '<p>' + element.TweetText + '</p>'; 
+                content = content + createCard(element.TweetText, element.TweetedBy, element.CreatedAtIso, element.MediaUrls); 
             });
 
-            $("#content").html(content);
+            $(".card-columns").html(content);
 
         }
     });
 });
+
+function createCard(text, user, time, image)
+{
+    var cardElementInit = "<div class='card tweet'>"; 
+
+    if (image.length > 0)
+    {
+        cardElementInit += '<img class="card-img-top" src="' + image[0] + '" alt="Image"></img>';
+    }
+
+    return cardElementInit +
+        '<div class="card-body">' +
+            '<p class="card-text">' + text + '</p>' +
+        '</div>' +
+        '<div class="card-footer">' +
+            '<small class="text-muted">' + user + ' - ' + (new Date(time)).toLocaleString() + '</small>' +
+        '</div>' +
+    '</div>';
+}

@@ -8,15 +8,47 @@
     <meta name="description" content="">
     <meta name="author" content="Timo Koriseva">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
+    <script src='js/echarts.min.js'></script>
     <script src="js/bundle.js"></script>
     
     </head>
     <body>
-        <div id="tweets" class="card-columns" style="margin: 2%; column-count: 3;">
-            
+        <div id="tweets" class="card-columns" style="column-count: 3;"></div>
+        
+        <div class="jumbotron">
+            <h1 class="display-4">#Desucon</h1>
+            <hr class="my-4">
+            <p class="lead">Simple application to display statistics about Twitter usage for #Desucon.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div id="countChart"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div id="dateChart"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div id="hourChart"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div id="cloud-card-body" class="card-body">
+                <div id="word-cloud"></div>
+            </div>
         </div>
     </body>
+
+    <script src='js/word-cloud.js'></script>
 </html>

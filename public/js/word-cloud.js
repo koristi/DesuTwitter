@@ -39,7 +39,7 @@ function getMostFrequent(allWords)
     }
     console.log(`${item} ( ${mf} times ) `) ;
 
-    if (allWords.length > 0 && item != undefined && mostFrequent.length < 10)
+    if (allWords.length > 0 && item != undefined && mostFrequent.length < 20)
     {
         mostFrequent.push(item);
         var newWords = allWords.filter(w => w != item);
@@ -79,9 +79,8 @@ function drawMeACloud(allwords)
 function createWordObject(word, freq) {
     var wordContainer = document.createElement("div");
     wordContainer.style.position = "absolute";
-    wordContainer.style.fontSize = freq + "px";
+    wordContainer.style.fontSize = freq / 20 + "vw";
     wordContainer.style.lineHeight = config.lineHeight;
-/*    wordContainer.style.transform = "translateX(-50%) translateY(-50%)";*/
     wordContainer.appendChild(document.createTextNode(word));
 
     return wordContainer;

@@ -99,6 +99,12 @@ function drawCountPerPerson(response) {
             text: 'Tweets Per User'
         },
         color: 'green',
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            
+                type : 'shadow'        
+            }
+        },
         xAxis: {
             type: 'category'
         },
@@ -155,6 +161,12 @@ function drawCountPerDate(response) {
             text: 'Tweets Per Date'
         },
         color: 'green',
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            
+                type : 'shadow'        
+            }
+        },
         xAxis: {
             type: 'category'
         },
@@ -212,6 +224,12 @@ function drawCountPerHour(response) {
             text: 'Tweets Per Hour'
         },
         color: 'green',
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            
+                type : 'shadow'        
+            }
+        },
         xAxis: {
             type: 'category'
         },

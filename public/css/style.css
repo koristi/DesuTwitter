@@ -24,28 +24,22 @@ body
 #countChart
 {
     height: 30vh;
-    width: 90vw;
-    margin: 0 auto;
 }
 
 #dateChart
 {
     height: 30vh;
-    width: 90vw;
-    margin: 0 auto;
 }
 
 #hourChart
 {
     height: 30vh;
-    width: 90vw;
-    margin: 0 auto;
 }
 
 .card
 {
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
 }
@@ -53,7 +47,6 @@ body
 #word-cloud
 {
     height: 30vh;
-    width: 90vw;
 }
 
 #cloud-card-body

@@ -36,6 +36,9 @@ $( document ).ready(function() {
         contentType:"application/json; charset=utf-8",
         dataType: "json",
         success: function (response) {
+            response.sort(function(a, b) {
+                return a.RowKey - b.RowKey;
+            });
             console.log(response);
             drawCountPerPerson(response);
             drawCountPerDate(response);
